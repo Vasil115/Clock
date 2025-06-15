@@ -3,50 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>clock</title>
-    <style>
-        body{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #222;
-}
-
-#clock{
-    font-size: 6rem;
-    font-weight: 1000;
-    padding: 25px 30px;
-    border-radius: 10px;
-    border: 5px solid #fff;
-    color: aqua;
-}
-    </style>
-
+    <title>Code Letter Generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="clock"></div>
-
-    <script>
-        function clock(){
-    var now = new Date()
-    var hours = now.getHours();
-    var minutes = now.getMinutes()
-    var seconds = now.getSeconds()
-
-    hours = hours < 10 ? "0" + hours : hours
-    minutes = minutes < 10 ? "0" + minutes : minutes
-    seconds = seconds < 10 ? "0" + seconds : seconds
-    var time = hours + ":" + minutes + ":" + seconds
-
-    document.getElementById("clock").innerHTML =time
-}
-
-setInterval(clock,1000)
-clock()
-
-
-    </script>
+    <div class="container">
+        <h1>മത്സര കോഡ് ജനറേറ്റർ</h1>
+        <p>പുതിയ കോഡ് ഉണ്ടാക്കാൻ ബട്ടൺ അമർത്തുക:</p>
+        <button id="generateCodeBtn">കോഡ് ഉണ്ടാക്കുക</button>
+        <div class="code-display">
+            <p>നിങ്ങളുടെ കോഡ്:</p>
+            <p id="displayCode" class="generated-code">C-XXXX</p>
+            <button id="copyCodeBtn">കോഡ് പകർത്തുക</button>
+        </div>
+        <div class="instructions">
+            <h2>എങ്ങനെ ഉപയോഗിക്കാം:</h2>
+            <ul>
+                <li>"കോഡ് ഉണ്ടാക്കുക" ബട്ടൺ അമർത്തുക.</li>
+                <li>ഉണ്ടാക്കിയ കോഡ് "കോഡ് പകർത്തുക" ബട്ടൺ ഉപയോഗിച്ച് പകർത്തുക.</li>
+                <li>ഈ കോഡ് നിങ്ങളുടെ മത്സര ആവശ്യങ്ങൾക്കായി ഉപയോഗിക്കുക.</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
-
